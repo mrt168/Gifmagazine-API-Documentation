@@ -1,8 +1,12 @@
 # GIFMAGAZINE API Documentation
 
+[http://api.gifmagazine.net/](http://api.gifmagazine.net/)
+
 ## 概要
 
 このドキュメントでは[GIFMGAZINE](http://gifmagazine.net/) APIの仕様について説明します。
+
+[GIFMAGAZINE GIF画像検索API 利用規約](http://api.gifmagazine.net/)に則って使用してください。
 
 ### リクエスト
 APIの通信にはHTTPプロトコルを利用します。
