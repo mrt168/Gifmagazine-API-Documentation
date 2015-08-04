@@ -47,7 +47,7 @@ CORSには対応していません。
 
 #### Request
 ```
-GET /v1/gifs/search?q=ラブライブ&limit=2&offset=0&safe=0 HTTP/1.1
+GET /v1/gifs/search?q=猫&limit=2&offset=0&safe=0 HTTP/1.1
 Accept: application/json
 Content-Length: 0
 Content-Type: application/x-www-form-urlencoded
@@ -62,42 +62,42 @@ Content-Type: application/json; charset=utf-8
 {
   "data": [
     {
-      "id": 1,
-      "url": "http://gifmagazine.net/post_images/1",
-      "title": "ラブライブ",
-      "description": "音ノ木坂学院",
-      "user_name": "矢澤にこ",
+      "id": 4003,
+      "url": "http://gifmagazine.net/post_images/4003",
+      "title": "いけー！",
+      "description": "#cat #猫 cat 猫",
+      "user_name": "berururunnnnnnn",
       "file_size": 2525252,
       "rate": "g",
       "image": {
         "default": {
-          "url": "http://img.gifmagazine.net/gifmagazine/images/1/original.gif",
+          "url": "http://img.gifmagazine.net/gifmagazine/images/4003/original.gif",
           "width": 500,
           "height": 400
         },
         "medium": {
-          "url": "http://img.gifmagazine.net/gifmagazine/images/1/medium.gif",
+          "url": "http://img.gifmagazine.net/gifmagazine/images/4003/medium.gif",
           "width": 300,
           "height": 240
         }
       }
     },
     {
-      "id": 2,
-      "url": "http://gifmagazine.net/post_images/2",
-      "title": "ラブライブ",
-      "description": "音ノ木坂学院",
-      "user_name": "西木野真姫",
+      "id": 17011,
+      "url": "http://gifmagazine.net/post_images/17011",
+      "title": "猫とボブサップがノリノリ",
+      "description": "ノリノリの猫がボブ・サップのような男の人とふりふりヴァイブレーションしている。無限ループするというgifの特性をうまく活かしたコラgifだ。",
+      "user_name": "razokulover",
       "file_size": 2525252,
       "rate": "g",
       "image": {
         "default": {
-          "url": "http://img.gifmagazine.net/gifmagazine/images/2/original.gif",
+          "url": "http://img.gifmagazine.net/gifmagazine/images/17011/original.gif",
           "width": 500,
           "height": 400
         },
         "medium": {
-          "url": "http://img.gifmagazine.net/gifmagazine/images/2/medium.gif",
+          "url": "http://img.gifmagazine.net/gifmagazine/images/17011/medium.gif",
           "width": 300,
           "height": 240
         }
