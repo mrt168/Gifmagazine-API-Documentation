@@ -28,9 +28,6 @@ JSON形式でデータを返します。
 ### 利用制限
 1リクエスト/秒まで受け付けます。
 
-### 注意
-CORSには対応していません。
-
 ## Endpoints
 
 - [Search](#get-v1gifssearch)
