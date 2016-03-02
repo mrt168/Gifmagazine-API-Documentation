@@ -31,6 +31,7 @@ JSON形式でデータを返します。
 ## Endpoints
 
 - [Search](#get-v1gifssearch)
+- [Emotion](#get-v1gifsemotion)
 
 ## GET /v1/gifs/search
 検索結果を返します。
@@ -108,5 +109,127 @@ Content-Type: application/json; charset=utf-8
     "count": 2,
     "offset": 0
   }
+}
+```
+
+## GET /v1/gifs/emotion
+[標準化されたユニコード絵文字](http://www.unicode.org/emoji/charts/full-emoji-list.html)を元に対応した感情のgif結果を返します。
+
+### パラメータ
+
+- q(必須) - 各種絵文字に対応するName(詳細は[現在対応済みの絵文字](#api%E3%81%A7%E5%AF%BE%E5%BF%9C%E6%B8%88%E3%81%BF%E3%81%AE%E7%B5%B5%E6%96%87%E5%AD%97)を参照)
+- limit - 返ってくる検索結果の件数。デフォルトは2件。最大2件。0~2以外の数値を指定した場合はデフォルト値が利用されます。
+- offset - オフセット。デフォルトは0。最大0。
+- safe - 0を指定するとR-18のgifを検索結果から除く。1を指定するとR-18のgifも含んだ検索結果を返す。デフォルトは0。
+
+#### 現在対応済みの絵文字
+
+|              Emoji              |                Name               |
+|:-------------------------------:|:---------------------------------:|
+| :grin: | grin |
+| :joy: | joy |
+| :smiley: | smiley |
+| :smile: | smile |
+| :sweat_smile: | sweat_smile |
+| :satisfied: | satisfied |
+| :wink: | wink |
+| :blush: | blush |
+| :yum: | yum |
+| :relieved: | relieved |
+| :heart_eyes: | heart_eyes |
+| :smirk: | smirk |
+| :unamused: | unamused |
+| :sweat: | sweat |
+| :pensive: | pensive |
+| :confounded: | confounded |
+| :kissing_heart: | kissing_heart |
+| :kissing_closed_eyes: | kissing_closed_eyes |
+| :stuck_out_tongue_winking_eye: | stuck_out_tongue_winking_eye |
+| :stuck_out_tongue_closed_eyes: | stuck_out_tongue_closed_eyes |
+| :disappointed: | disappointed |
+| :angry: | angry |
+| :rage: | rage |
+| :cry: | cry |
+| :persevere: | persevere |
+| :triumph: | triumph |
+| :disappointed_relieved: | disappointed_relieved |
+| :fearful: | fearful |
+| :weary: | weary |
+| :sleepy: | sleepy |
+| :tired_face: | tired_face |
+| :sob: | sob |
+| :cold_sweat: | cold_sweat |
+| :scream: | scream |
+| :astonished: | astonished |
+| :flushed: | flushed |
+| :dizzy_face: | dizzy_face |
+| :mask: | mask |
+
+### Example
+
+#### Request
+```
+GET /v1/gifs/emotion?q=yum&limit=2&offset=0&safe=0 HTTP/1.1
+Accept: application/json
+Content-Length: 0
+Content-Type: application/x-www-form-urlencoded
+Host: api.gifmagazine.net
+```
+
+#### Response
+```
+HTTP/1.1 200
+Content-Type: application/json; charset=utf-8
+
+{
+    "data": [
+        {
+            "id": 727127,
+            "url": "http://gifmagazine.net/post_images/727127",
+            "title": "face savouring delicious food[9-6]",
+            "description": "face savouring delicious food[9-6]",
+            "user_name": "Mr.emotion",
+            "file_size": 1191679,
+            "rate": "g",
+            "image": {
+                "default": {
+                    "url": "http://img.gifmagazine.net/gifmagazine/images/727127/original.gif",
+                    "width": 393,
+                    "height": 200
+                },
+                "medium": {
+                    "url": "http://img.gifmagazine.net/gifmagazine/images/727127/medium.gif",
+                    "width": 300,
+                    "height": 153
+                }
+            }
+        },
+        {
+            "id": 727159,
+            "url": "http://gifmagazine.net/post_images/727159",
+            "title": "face savouring delicious food[9-8]",
+            "description": "face savouring delicious food[9-8]",
+            "user_name": "Mr.emotion",
+            "file_size": 1057956,
+            "rate": "g",
+            "image": {
+                "default": {
+                    "url": "http://img.gifmagazine.net/gifmagazine/images/727159/original.gif",
+                    "width": 288,
+                    "height": 200
+                },
+                "medium": {
+                    "url": "http://img.gifmagazine.net/gifmagazine/images/727159/medium.gif",
+                    "width": 300,
+                    "height": 208
+                }
+            }
+        }
+    ],
+    "pagination": {
+        "total_count": 10,
+        "count": 2,
+        "offset": 0
+    }
 }
 ```
